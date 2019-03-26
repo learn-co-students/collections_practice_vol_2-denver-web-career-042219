@@ -1,0 +1,30 @@
+
+[1mFrom:[0m /home/DrBarq/collections_practice_vol_2-denver-web-career-042219/collections_practice.rb @ line 189 Object#organize_schools:
+
+    [1;34m181[0m: [32mdef[0m [1;34morganize_schools[0m(schools)
+    [1;34m182[0m:   school_hash_two = [1;34;4mHash[0m.new
+    [1;34m183[0m:   school_hash = [1;34;4mHash[0m.new
+    [1;34m184[0m: 
+    [1;34m185[0m:   schools.map [32mdo[0m |school, location_info|
+    [1;34m186[0m:     location_info.map [32mdo[0m |k, v|
+    [1;34m187[0m:       [32mif[0m school_hash_two.include?(v) && school_hash.include?(v)
+    [1;34m188[0m:         school_hash_two[v] =  school_hash_two[v] << (school)
+ => [1;34m189[0m:         binding.pry
+    [1;34m190[0m:       [32melsif[0m school_hash.include?(v)
+    [1;34m191[0m: 
+    [1;34m192[0m:         school_hash[v] << school
+    [1;34m193[0m: 
+    [1;34m194[0m:       [32melse[0m
+    [1;34m195[0m:         school_hash = {v => [school]}
+    [1;34m196[0m:       [32mend[0m
+    [1;34m197[0m: 
+    [1;34m198[0m:       school_hash_two = school_hash_two.merge(school_hash)
+    [1;34m199[0m: 
+    [1;34m200[0m: 
+    [1;34m201[0m:     [32mend[0m
+    [1;34m202[0m: [1;34m#binding.pry[0m
+    [1;34m203[0m: puts school_hash_two
+    [1;34m204[0m:   [32mend[0m
+    [1;34m205[0m: 
+    [1;34m206[0m: [32mend[0m
+
